@@ -20,7 +20,7 @@ export default function ChatThread({ messages }: { messages: ChatMessage[] }) {
         ) : (
           messages.map((m) =>
             m.role === "user" ? (
-              <MessageUser key={m.id} code={m.code} level={m.level} />
+              <MessageUser key={m.id} code={m.code}/>
             ) : (
               <MessageAssistant key={m.id} data={m.data} />
             )

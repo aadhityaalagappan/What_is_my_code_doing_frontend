@@ -256,7 +256,6 @@ export default function MessageAssistant({ data }: { data: CodeSolution }) {
               ].join(" ")}
               type="button"
             >
-              <span className="text-lg">{t.icon}</span>
               <span>{t.label}</span>
             </button>
           ))}
@@ -265,7 +264,7 @@ export default function MessageAssistant({ data }: { data: CodeSolution }) {
         <div className="p-8 bg-white min-h-[500px] max-h-[800px] overflow-y-auto">
           {activeTab && (
             <div className="transition-opacity duration-300">
-              <FormattedContent text={activeTab.body} />
+              <FormattedContent text={activeTab.body ?? ''} />
             </div>
           )}
         </div>

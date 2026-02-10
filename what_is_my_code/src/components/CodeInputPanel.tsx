@@ -5,14 +5,13 @@ type Props = {
     loading: boolean;
     onSubmit: (payload: {
         code: string;
-        level: ExplainLevel
+        level?: ExplainLevel
     }) => void;
     onClear: () => void;
 }
 
 export default function CodeInputPanel({loading, onSubmit, onClear}: Props) {
     const [code, setCode] = useState<string>("");
-    const [level, setLevel] = useState<ExplainLevel>("beginner");
 
     function handleClear() {
         setCode("");
@@ -34,7 +33,7 @@ export default function CodeInputPanel({loading, onSubmit, onClear}: Props) {
 
             <button
                 className="mt-3 w-full bg-zinc-900 text-white rounded-xl py-2 font-medium disabled:opacity-60"
-                onClick={() => onSubmit({ code, level })}
+                onClick={() => onSubmit({ code })}
                 disabled={loading || code.trim().length == 0}
                 type="button"
             >

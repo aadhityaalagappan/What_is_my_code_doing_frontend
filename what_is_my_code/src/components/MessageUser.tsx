@@ -1,6 +1,5 @@
-import type { ExplainLevel } from "../types/chat";
 
-export default function MessageUser({ code, level }: { code: string; level: ExplainLevel }) {
+export default function MessageUser({ code }: { code: string; }) {
     return (
         <div className="flex justify-end">
             <div className="max-w-[85%] bg-zinc-900 text-white rounded-2xl p-4">

@@ -12,20 +12,21 @@ export default function App() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(payload: { code: string; level: ExplainLevel }) {
-    const { code, level } = payload;
+  async function handleSubmit(payload: { code: string; level?: ExplainLevel }) {
+    const { code } = payload;
 
     const userMsg: ChatMessage = {
       id: uid(),
       role: "user",
       code,
-      level,
+      level: "beginner",
       createdAt: Date.now(),
     };
     setMessages((prev) => [...prev, userMsg]);
 
     setLoading(true);
     try {
+      const level = "beginner"
       const data = await explainCode({ code, level });
 
       const assistantMsg: ChatMessage = {
