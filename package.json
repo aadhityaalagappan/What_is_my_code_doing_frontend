@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-syntax-highlighter": "^16.1.0",
+    "remark-gfm": "^4.0.1"
+  }
+}
