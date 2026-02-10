@@ -8,7 +8,7 @@ export type ExplainRequest = {
 export interface CodeSolution {
     explanation: string;
     timecomplexity: string;
-    spacecomplexity: string;
+    spacecomplexity?: string;
     commonerrors: string;
   }
 

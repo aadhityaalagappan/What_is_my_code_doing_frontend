@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CodeInputPanel from "./components/CodeInputPanel";
 import ChatThread from "./components/ChatThread";
 import { explainCode } from "./api/explainApi";
